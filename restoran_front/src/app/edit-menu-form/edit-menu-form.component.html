@@ -1,0 +1,21 @@
+<div class="mx-5" style="width: 250px">
+    <form (ngSubmit)="editMenu()">
+      <div class="form-group">
+          <label for="menu-name">name</label>
+          <input class="form-control" name="menu-name" type="text" [(ngModel)]="menuToEdit.name"/>
+        </div>
+      <div class="form-group">
+          <label for="menu-category">category</label>
+          <select class="form-control" id="menu-category" [(ngModel)] ="menuToEdit.category.id" name="menu-category">
+              <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+          </select>
+      </div>
+      <div class="form-group">
+        <label for="menu-price">price: </label>
+        <input class="form-control" name="menu-price" type="number" [(ngModel)] = "menuToEdit.price"/>
+      </div>
+      <input class="btn btn-secondary" type="submit" value="save"/>
+
+    </form>
+  </div>
+

@@ -1,0 +1,17 @@
+<app-search (setSearchTerm)="search($event)"></app-search>
+<button class="btn mx-5" (click)="previousPage()" [disabled]="page == 0"><<</button>
+<button class="btn" (click)="nextPage()" [disabled]="last">>></button>
+<div class="container-fluid mx-4">
+  <div class="row align-items-start">
+  <div class="col-9">
+<app-menu-list  [menus]="menus" (menuDeleted)="deleteMenu($event)"(markMenuForEditing)="setActiveMenu($event)"></app-menu-list>
+  </div>
+  <div class="col">
+    <app-add-menu-form  *ngIf="!toAdd" (menuAdded)="addMenu($event)" [categories]="categories"></app-add-menu-form>
+    <app-edit-menu-form *ngIf="toAdd" (menuEdited)="editMenu($event)" [menuToEdit]="activeMenu" [categories]="categories"></app-edit-menu-form>
+    <button class="btn  btn-secondary"  style="margin-left: 48px"   (click)="resetActiveMenu()">reset</button>
+  </div>
+  </div>
+</div>
+
+

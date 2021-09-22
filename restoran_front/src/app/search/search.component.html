@@ -1,0 +1,13 @@
+<div class="mx-5"style="width: 250px">
+<form (ngSubmit)="search()" class="form-inline">
+    <div class="form-group">
+      <label for="search-by-name">Name:</label>
+      <input class="form-control" name="search-by-name" type="text" [(ngModel)]="searchTerm" />
+    </div>
+
+    <div class="btn-group">
+      <input class="btn btn-primary" type="submit" value="search" />
+      <button class="btn btn-warning" type="button" (click)="reset()">clear</button>
+    </div>
+  </form>
+</div>

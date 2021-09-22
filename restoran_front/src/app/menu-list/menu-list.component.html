@@ -1,0 +1,19 @@
+
+<div >
+	<div  class="bg-secondary bg-opacity-10" >
+
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="min-width:300px">name</th><th style="max-width: 10px">category</th><th style="max-width: 10px">price</th><th>action</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			 <tr app-menu-list-item  *ngFor="let menu of menus" [menu]="menu" (markMenuForEditing)="editMenu($event)" (menuDeleted)="deleteMenu($event)"></tr>
+
+		</tbody>
+	</table>
+</div>
+
+
