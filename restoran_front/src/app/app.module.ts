@@ -12,6 +12,7 @@ import { SearchComponent } from './search/search.component';
 import { AddMenuFormComponent } from './add-menu-form/add-menu-form.component';
 import { EditMenuFormComponent } from './edit-menu-form/edit-menu-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
